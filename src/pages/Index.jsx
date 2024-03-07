@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import { Box, Heading, Input, Button, List, ListItem, ListIcon, VStack, HStack, IconButton, useToast } from "@chakra-ui/react";
 import { FaPlus, FaTrash } from "react-icons/fa";
 
+const Footer = () => {
+  return (
+    <Box as="footer" py={5} textAlign="center" w="full" borderTop="1px" borderColor="gray.200" mt={10}>
+      © {new Date().getFullYear()} Todo App. All rights reserved.
+    </Box>
+  );
+};
+
 const Index = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -52,6 +60,7 @@ const Index = () => {
           </ListItem>
         ))}
       </List>
+      <Footer />
     </VStack>
   );
 };
